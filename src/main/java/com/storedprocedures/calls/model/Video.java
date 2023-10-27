@@ -2,6 +2,8 @@ package com.storedprocedures.calls.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.NamedStoredProcedureQueries;
+import jakarta.persistence.NamedStoredProcedureQuery;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +12,9 @@ import lombok.Setter;
 @Table
 @Getter
 @Setter
+@NamedStoredProcedureQueries(
+		{	@NamedStoredProcedureQuery(name="firstProcedure", procedureName="getVideos"), 
+			@NamedStoredProcedureQuery(name="secondProcedure", procedureName="getVideosByUsername")})
 public class Video {
 	@Id
 	private int id;
