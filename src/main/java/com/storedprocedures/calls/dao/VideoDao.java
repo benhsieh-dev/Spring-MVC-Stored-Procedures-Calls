@@ -15,6 +15,7 @@ public class VideoDao {
 	@Autowired
 	private EntityManager em; 
 	
+	@SuppressWarnings("unchecked")
 	public List<Video> getVideoInfo() {
 		return em.createStoredProcedureQuery("firstProcedure").getResultList();
 	}
