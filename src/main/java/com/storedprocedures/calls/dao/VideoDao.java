@@ -19,5 +19,10 @@ public class VideoDao {
 	public List<Video> getVideoInfo() {
 		return em.createStoredProcedureQuery("firstProcedure").getResultList();
 	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Video> getVideoInfoByUsername(String username ) {
+		return em.createStoredProcedureQuery("secondProcedure").getResultList();
+	}
 
 }
