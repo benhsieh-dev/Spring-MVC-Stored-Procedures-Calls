@@ -22,7 +22,7 @@ public class VideoDao {
 	
 	@SuppressWarnings("unchecked")
 	public List<Video> getVideoInfoByUsername(String username ) {
-		return em.createStoredProcedureQuery("secondProcedure").getResultList();
+		return em.createStoredProcedureQuery("secondProcedure").setParameter("tusername", username).getResultList();
 	}
 
 }
