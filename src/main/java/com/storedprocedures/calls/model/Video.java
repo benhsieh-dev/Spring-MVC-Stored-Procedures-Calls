@@ -6,6 +6,7 @@ import jakarta.persistence.NamedStoredProcedureQueries;
 import jakarta.persistence.NamedStoredProcedureQuery;
 import jakarta.persistence.StoredProcedureParameter;
 import jakarta.persistence.Table;
+import jakarta.persistence.ParameterMode;
 import lombok.Getter;
 import lombok.Setter;
 
